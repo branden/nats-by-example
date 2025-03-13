@@ -1,0 +1,54 @@
+2006-05-04T03:02:01Z Control plane created
+reconciler: setting creation timestamp
+reconciler: create created_at
+reconciler: create: succeeded
+reconciler: setting size=small
+reconciler: get size_at
+reconciler: get: got ErrKeyNotFound
+reconciler: create size_at
+reconciler: create: succeeded
+2006-05-04T03:07:01Z Control plane size updated
+reconciler: setting creation timestamp
+reconciler: create created_at
+reconciler: create: got ErrKeyExists
+reconciler: setting size=large
+reconciler: get size_at
+reconciler: get: succeeded
+reconciler: update size_at
+reconciler: update: succeeded
+2006-05-04T03:12:01Z Control plane synced with no changes
+reconciler: setting creation timestamp
+reconciler: create created_at
+reconciler: create: got ErrKeyExists
+reconciler: setting size=large
+reconciler: get size_at
+reconciler: get: succeeded
+reconciler: size is up to date
+2006-05-04T03:17:01Z Control plane deleted
+reconciler: setting creation timestamp
+reconciler: create created_at
+reconciler: create: got ErrKeyExists
+reconciler: setting size=large
+reconciler: get size_at
+reconciler: get: succeeded
+reconciler: size is up to date
+reconciler: setting deletion timestamp
+reconciler: create deleted_at
+reconciler: create: succeeded
+2006-05-04T03:22:01Z Exporter deployed
+exporter: watch: controlplane.group1.ctp1.abcd-1234.created_at @ 1 -> "2006-05-04T03:02:01Z" (op: KeyValuePutOp)
+exporter: watch: controlplane.group1.ctp1.abcd-1234.size_at @ 2 -> "small,2006-05-04T03:02:01Z" (op: KeyValuePutOp)
+exporter: watch: controlplane.group1.ctp1.abcd-1234.size_at @ 3 -> "large,2006-05-04T03:07:01Z" (op: KeyValuePutOp)
+exporter: watch: controlplane.group1.ctp1.abcd-1234.deleted_at @ 4 -> "2006-05-04T03:17:01Z" (op: KeyValuePutOp)
+exporter: caught up
+2006-05-04T03:27:01Z Control plane created
+reconciler: setting creation timestamp
+reconciler: create created_at
+exporter: watch: controlplane.group1.ctp2.dcba-4321.created_at @ 5 -> "2006-05-04T03:27:01Z" (op: KeyValuePutOp)
+reconciler: create: succeeded
+reconciler: setting size=small
+reconciler: get size_at
+reconciler: get: got ErrKeyNotFound
+reconciler: create size_at
+exporter: watch: controlplane.group1.ctp2.dcba-4321.size_at @ 6 -> "small,2006-05-04T03:27:01Z" (op: KeyValuePutOp)
+reconciler: create: succeeded
